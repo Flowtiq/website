@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "dev": "tsx watch src/index.ts",
-    "build": "tsup src/index.ts --format esm --clean --dts",
+    "build": "tsup",
     "start": "node dist/index.js",
     "test:email": "npx tsx tests/email.test.ts"
   },

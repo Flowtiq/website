@@ -1,0 +1,11 @@
+CACError: option `--external <name>` value is missing
+    at Command.checkOptionValue (/home/flowtiq/website/node_modules/cac/dist/index.js:417:17)
+    at CAC.runMatchedCommand (/home/flowtiq/website/node_modules/cac/dist/index.js:603:13)
+    at main (/home/flowtiq/website/node_modules/tsup/dist/chunk-DI5BO6XE.js:148:13)
+    at Object.<anonymous> (/home/flowtiq/website/node_modules/tsup/dist/cli-default.js:12:23)
+    at Module._compile (node:internal/modules/cjs/loader:1706:14)
+    at Object..js (node:internal/modules/cjs/loader:1839:10)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)

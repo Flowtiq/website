@@ -31,6 +31,7 @@ RUN adduser --system --uid 1001 fastify
 # Copy built backend
 COPY --from=builder --chown=fastify:nodejs /app/backend/dist ./dist
 COPY --from=builder --chown=fastify:nodejs /app/backend/package.json ./
+COPY --from=builder --chown=fastify:nodejs /app/shared ./shared
 
 # Copy node_modules (we need prod deps)
 # In a monorepo, deps might be at root. For simplicity in this env, we'll copy the full node_modules from builder
