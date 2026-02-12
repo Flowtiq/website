@@ -20,6 +20,10 @@ export const metadata: Metadata = {
     template: "%s — FlowTIQ",
   },
   description: "Verlos medewerkers van onnodige administratieve lasten",
+  icons: {
+    icon: '/favicon.svg',
+    apple: '/favicon.svg',
+  },
 };
 
 export default function RootLayout({

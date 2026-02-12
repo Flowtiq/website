@@ -79,7 +79,7 @@ function UseCase({ id, icon, title, theme, situatie, oplossing, resultaatText, q
             <div className="bg-white rounded-[40px] border border-slate-200 overflow-hidden shadow-sm">
                 <div className="p-10 md:p-16">
                     <div className="flex items-center gap-4 mb-8">
-                        <div className={`h-14 w-14 rounded-2xl ${iconBg} text-white flex items-center justify-center shadow-lg`}>
+                        <div className={`h-14 w-14 flex-shrink-0 aspect-square rounded-2xl ${iconBg} text-white flex items-center justify-center shadow-lg`}>
                             {icon}
                         </div>
                         <h2 className="text-3xl font-bold text-indigo font-montserrat">Use Case FlowTIQ {title}</h2>

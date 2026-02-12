@@ -21,8 +21,7 @@ export function Navbar() {
     }, []);
 
     return (
-        <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'glass-panel border-b border-slate-200/60 py-3' : 'bg-transparent py-5'
-            }`}>
+        <nav className="fixed w-full z-50 transition-all duration-300 glass-panel border-b border-slate-200/60 py-3">
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
                 <div className="flex items-center justify-between">
                     {/* Logo */}
