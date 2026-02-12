@@ -1,0 +1,12 @@
+{
+  "name": "flowtiq-monorepo",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend",
+    "shared"
+  ],
+  "scripts": {
+    "test:email": "npm run test:email --workspace=backend"
+  }
+}

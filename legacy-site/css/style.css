@@ -1,0 +1,134 @@
+/* ============================================
+   FlowTIQ — Shared Styles
+   ============================================ */
+
+/* ---------- Base ---------- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-feature-settings: "cv11", "ss01";
+    margin: 0;
+    color: #2D3748;
+    /* Charcoal Blue */
+}
+
+/* ---------- Brand Colors (Utilities) ---------- */
+.text-indigo {
+    color: #2A3356;
+}
+
+/* Twilight Indigo */
+.text-mint {
+    color: #00CC9C;
+}
+
+/* Mint Leaf */
+.text-dusk {
+    color: #44538C;
+}
+
+/* Dusk Blue */
+.bg-parchment {
+    background-color: #F5F0EB;
+}
+
+.bg-indigo {
+    background-color: #2A3356;
+}
+
+.bg-mint {
+    background-color: #00CC9C;
+}
+
+/* ---------- Glass Panel (Nav) ---------- */
+.glass-panel {
+    background: rgba(245, 240, 235, 0.8);
+    /* Parchment with opacity */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+/* ---------- Smooth Scroll ---------- */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ---------- Selection Colors ---------- */
+::selection {
+    background-color: rgba(0, 204, 156, 0.2);
+    /* Mint Leaf 20% */
+    color: #2D3748;
+    /* Charcoal Blue */
+}
+
+/* ---------- Text Effects ---------- */
+.font-montserrat {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.gradient-text {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(to right, #2A3356, #00CC9C);
+}
+
+/* ---------- Background Patterns ---------- */
+.bg-decoration {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -10;
+    width: 800px;
+    height: 800px;
+    background: linear-gradient(to top right, rgba(42, 51, 86, 0.1), rgba(0, 204, 156, 0.1));
+    filter: blur(120px);
+    border-radius: 9999px;
+    pointer-events: none;
+}
+
+.bg-dot-grid {
+    background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+    background-size: 16px 16px;
+    mask-image: radial-gradient(ellipse 50% 50% at 50% 50%, #000 70%, transparent 100%);
+    opacity: 0.4;
+}
+
+/* ---------- Page transition fade-in ---------- */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeInUp 0.6s ease-out both;
+}
+
+.animate-delay-100 {
+    animation-delay: 0.1s;
+}
+
+.animate-delay-200 {
+    animation-delay: 0.2s;
+}
+
+.animate-delay-300 {
+    animation-delay: 0.3s;
+}
+
+.animate-delay-400 {
+    animation-delay: 0.4s;
+}

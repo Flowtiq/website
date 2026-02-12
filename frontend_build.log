@@ -1,0 +1,145 @@
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.33kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/node:22-alpine
+#2 DONE 0.5s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [base 1/1] FROM docker.io/library/node:22-alpine@sha256:e4bf2a82ad0a4037d28035ae71529873c069b13eb0455466ae0bc13363826e34
+#4 DONE 0.0s
+
+#5 [deps 1/6] WORKDIR /app
+#5 CACHED
+
+#6 [internal] load build context
+#6 transferring context: 82.22kB 0.0s done
+#6 DONE 0.0s
+
+#7 [deps 2/6] COPY package.json package-lock.json ./
+#7 DONE 0.0s
+
+#8 [runner 2/6] RUN addgroup --system --gid 1001 nodejs
+#8 DONE 0.2s
+
+#9 [deps 3/6] COPY frontend/package.json ./frontend/
+#9 DONE 0.1s
+
+#10 [deps 4/6] COPY backend/package.json ./backend/
+#10 DONE 0.1s
+
+#11 [runner 3/6] RUN adduser --system --uid 1001 nextjs
+#11 DONE 0.3s
+
+#12 [deps 5/6] COPY shared/package.json ./shared/
+#12 DONE 0.1s
+
+#13 [deps 6/6] RUN npm ci
+#13 8.536 
+#13 8.536 added 486 packages, and audited 490 packages in 8s
+#13 8.536 
+#13 8.536 176 packages are looking for funding
+#13 8.536   run `npm fund` for details
+#13 8.537 
+#13 8.537 found 0 vulnerabilities
+#13 8.538 npm notice
+#13 8.538 npm notice New major version of npm available! 10.9.4 -> 11.10.0
+#13 8.538 npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.10.0
+#13 8.538 npm notice To update run: npm install -g npm@11.10.0
+#13 8.538 npm notice
+#13 DONE 9.0s
+
+#14 [builder  2/10] COPY --from=deps /app/node_modules ./node_modules
+#14 DONE 1.9s
+
+#15 [builder  3/10] COPY --from=deps /app/package.json ./package.json
+#15 DONE 0.1s
+
+#16 [builder  4/10] COPY --from=deps /app/package-lock.json ./package-lock.json
+#16 DONE 0.1s
+
+#17 [builder  5/10] COPY shared ./shared
+#17 DONE 0.2s
+
+#18 [builder  6/10] COPY frontend ./frontend
+#18 DONE 0.2s
+
+#19 [builder  7/10] COPY frontend/tsconfig.json ./frontend/
+#19 DONE 0.1s
+
+#20 [builder  8/10] COPY tsconfig.json ./
+#20 DONE 0.1s
+
+#21 [builder  9/10] WORKDIR /app/frontend
+#21 DONE 0.0s
+
+#22 [builder 10/10] RUN npm run build
+#22 0.423 
+#22 0.423 > frontend@0.1.0 build
+#22 0.423 > next build
+#22 0.423 
+#22 1.178 ▲ Next.js 16.1.6 (Turbopack)
+#22 1.178 
+#22 1.193   Creating an optimized production build ...
+#22 5.055 ✓ Compiled successfully in 3.5s
+#22 5.058   Running TypeScript ...
+#22 5.311 ⚠ TypeScript project references are not fully supported. Attempting to build in incremental mode.
+#22 6.935 Failed to compile.
+#22 6.935 
+#22 6.935 ./lib/trpc.ts:2:32
+#22 6.935 Type error: Cannot find module '../../backend/src/router' or its corresponding type declarations.
+#22 6.935 
+#22 6.935 [0m [90m 1 |[39m [36mimport[39m { createTRPCClient[33m,[39m httpBatchLink } [36mfrom[39m [32m'@trpc/client'[39m[33m;[39m
+#22 6.935 [31m[1m>[22m[39m[90m 2 |[39m [36mimport[39m type { [33mAppRouter[39m } [36mfrom[39m [32m'../../backend/src/router'[39m[33m;[39m
+#22 6.935  [90m   |[39m                                [31m[1m^[22m[39m
+#22 6.935  [90m 3 |[39m
+#22 6.935  [90m 4 |[39m [90m// In production, this should be an environment variable[39m
+#22 6.935  [90m 5 |[39m [36mconst[39m getBaseUrl [33m=[39m () [33m=>[39m {[0m
+#22 7.086 Next.js build worker exited with code: 1 and signal: null
+#22 7.144 npm error Lifecycle script `build` failed with error:
+#22 7.144 npm error code 1
+#22 7.144 npm error path /app/frontend
+#22 7.144 npm error workspace frontend@0.1.0
+#22 7.144 npm error location /app/frontend
+#22 7.144 npm error command failed
+#22 7.144 npm error command sh -c next build
+#22 7.145 npm notice
+#22 7.145 npm notice New major version of npm available! 10.9.4 -> 11.10.0
+#22 7.145 npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.10.0
+#22 7.145 npm notice To update run: npm install -g npm@11.10.0
+#22 7.145 npm notice
+#22 ERROR: process "/bin/sh -c npm run build" did not complete successfully: exit code: 1
+------
+ > [builder 10/10] RUN npm run build:
+7.144 npm error path /app/frontend
+7.144 npm error workspace frontend@0.1.0
+7.144 npm error location /app/frontend
+7.144 npm error command failed
+7.144 npm error command sh -c next build
+7.145 npm notice
+7.145 npm notice New major version of npm available! 10.9.4 -> 11.10.0
+7.145 npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.10.0
+7.145 npm notice To update run: npm install -g npm@11.10.0
+7.145 npm notice
+------
+
+ [33m5 warnings found (use docker --debug to expand):
+[0m - LegacyKeyValueFormat: "ENV key=value" should be used instead of legacy "ENV key value" format (line 32)
+ - LegacyKeyValueFormat: "ENV key=value" should be used instead of legacy "ENV key value" format (line 33)
+ - LegacyKeyValueFormat: "ENV key=value" should be used instead of legacy "ENV key value" format (line 49)
+ - LegacyKeyValueFormat: "ENV key=value" should be used instead of legacy "ENV key value" format (line 50)
+ - LegacyKeyValueFormat: "ENV key=value" should be used instead of legacy "ENV key value" format (line 26)
+Dockerfile:27
+--------------------
+  25 |     WORKDIR /app/frontend
+  26 |     ENV NEXT_TELEMETRY_DISABLED 1
+  27 | >>> RUN npm run build
+  28 |     
+  29 |     # Stage 3: Production server
+--------------------
+ERROR: failed to build: failed to solve: process "/bin/sh -c npm run build" did not complete successfully: exit code: 1

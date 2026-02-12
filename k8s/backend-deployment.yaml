@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flowtiq-website-backend
+  namespace: ai-services
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: flowtiq-website-backend
+  template:
+    metadata:
+      labels:
+        app: flowtiq-website-backend
+    spec:
+      containers:
+      - name: backend
+        image: localhost:5001/flowtiq-website-backend:monorepo-v1
+        ports:
+        - containerPort: 3001
+        env:
+        - name: PORT
+          value: "3001"
+        - name: CONTACT_RECEIVER
+          value: "oscar@flowtiq.nl, martijn@flowtiq.nl"
+        - name: AZURE_CLIENT_ID
+          value: "f2ac8221-1c00-48c1-ae38-91e350e3b196"
+        - name: AZURE_TENANT_ID
+          value: "927f2ffc-c2fe-458e-8861-58039d02c3c1"
+        - name: AZURE_CLIENT_SECRET
+          valueFrom:
+            secretKeyRef:
+              name: flowtiq-website-secrets
+              key: azure-client-secret
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: flowtiq-website-backend
+  namespace: ai-services
+spec:
+  selector:
+    app: flowtiq-website-backend
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 3001

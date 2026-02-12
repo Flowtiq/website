@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@flowtiq/shared": ["shared/src/index.ts"]
+    },
+    "composite": true,
+    "declaration": true,
+    "declarationMap": true,
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "target": "ESNext",
+    "skipLibCheck": true,
+    "strict": true
+  },
+  "exclude": ["node_modules", "legacy-site"]
+}
