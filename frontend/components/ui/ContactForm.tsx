@@ -118,22 +118,6 @@ export function ContactForm() {
                     </>
                 ) : "Verzend gegevens"}
             </button>
-
-            <div className="mt-8 text-xs text-indigo-300/80 font-sans space-y-3 border-t border-indigo-900/30 pt-6">
-                <p className="font-semibold text-mint">
-                    <span className="opacity-70">Protected by </span>
-                    ALTCHA (2026 Enterprise Standard)
-                </p>
-                <p className="leading-relaxed">
-                    A privacy-first solution that uses a PoW mechanism—essentially, your computer solves a complex math problem in the background to "pay" for the right to submit.
-                </p>
-
-                <div className="grid grid-cols-1 gap-2 opacity-80">
-                    <p><strong>User Experience:</strong> Simple checksum verification. difficulty scales only with risk.</p>
-                    <p><strong>Privacy:</strong> 100% self-hosted, MIT-licensed, zero cookies or fingerprinting.</p>
-                    <p><strong>2026 Update:</strong> Enhanced with ALTCHA Sentinel for local threat intelligence.</p>
-                </div>
-            </div>
         </form>
     );
 }
