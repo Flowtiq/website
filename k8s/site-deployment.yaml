@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: website
-        image: localhost:5001/flowtiq-website:monorepo-v5
+        image: localhost:5001/flowtiq-website:monorepo-v6
         ports:
         - containerPort: 3000
 ---
