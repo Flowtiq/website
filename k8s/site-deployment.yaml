@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: website
-        image: localhost:5001/flowtiq-website:monorepo-v9
+        image: localhost:5001/flowtiq-website:monorepo-v10
         ports:
         - containerPort: 3000
 ---
@@ -55,13 +55,6 @@ spec:
             name: flowtiq-website
             port:
               number: 80
-      - path: /trpc
-        pathType: Prefix
-        backend:
-          service:
-            name: flowtiq-website-backend
-            port:
-              number: 80
   - host: flowtiq.nl
     http:
       paths:
@@ -70,13 +63,6 @@ spec:
         backend:
           service:
             name: flowtiq-website
-            port:
-              number: 80
-      - path: /trpc
-        pathType: Prefix
-        backend:
-          service:
-            name: flowtiq-website-backend
             port:
               number: 80
   tls:
