@@ -1,9 +1,35 @@
+'use client';
+
 import Link from 'next/link';
 import Image from 'next/image';
+import { contactSchema } from '@flowtiq/shared';
 import { MdEmail, MdPhone, MdLocationOn } from '@/components/icons';
 import { CONTACT_INFO, NAV_LINKS } from '@/lib/constants';
+import { useVersion } from '@/lib/VersionContext';
+import { V0Footer } from '@/components/v0/layout/V0Footer';
+import { V1Footer } from '@/components/v1/layout/V1Footer';
+import { V2Footer } from '@/components/v2/layout/V2Footer';
+import { V3Footer } from '@/components/v3/layout/V3Footer';
 
 export function Footer() {
+    const { version } = useVersion();
+
+    if (version === 3) {
+        return <V3Footer />;
+    }
+
+    if (version === 2) {
+        return <V2Footer />;
+    }
+
+    if (version === 1) {
+        return <V1Footer />;
+    }
+
+    return <V0Footer />;
+}
+
+export function FooterLegacy() {
     return (
         <footer id="contact" className="pt-20 pb-10 border-t border-slate-200 bg-slate-50">
             <div className="max-w-7xl mx-auto px-6 lg:px-8">

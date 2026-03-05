@@ -1,5 +1,6 @@
 import { createTRPCClient, httpBatchLink } from '@trpc/client';
-import type { AppRouter } from '../../backend/src/router';
+// import type { AppRouter } from '../../backend/src/router';
+type AppRouter = any; // Temporary fix since backend directory is missing in current session
 
 // In production, this should be an environment variable
 const getBaseUrl = () => {

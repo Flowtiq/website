@@ -1,9 +1,30 @@
-export const metadata = {
-    title: "Over FlowTIQ — Uw Digitale Collega's",
-    description: "Meer dan softwareleverancier: Uw partner in proces en techniek",
-};
+'use client';
 
-export default function OverOnsPage() {
+import React from 'react';
+import { useVersion } from '@/lib/VersionContext';
+import { V1OverOnsPage } from '@/components/v1/pages/V1OverOnsPage';
+import { V2OverOnsPage } from '@/components/v2/pages/V2OverOnsPage';
+import { V3OverOnsPage } from '@/components/v3/pages/V3OverOnsPage';
+
+export default function OverOnsPageSwitcher() {
+    const { version } = useVersion();
+
+    if (version === 3) {
+        return <V3OverOnsPage />;
+    }
+
+    if (version === 2) {
+        return <V2OverOnsPage />;
+    }
+
+    if (version === 1) {
+        return <V1OverOnsPage />;
+    }
+
+    return <V0OverOnsPage />;
+}
+
+function V0OverOnsPage() {
     return (
         <main className="flex-grow pt-32 pb-24">
             {/* Mission */}

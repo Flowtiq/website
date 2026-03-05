@@ -1,14 +1,33 @@
+'use client';
+
+import React from 'react';
+import { useVersion } from '@/lib/VersionContext';
+import { V1ContactPage } from '@/components/v1/pages/V1ContactPage';
+import { V2ContactPage } from '@/components/v2/pages/V2ContactPage';
+import { V3ContactPage } from '@/components/v3/pages/V3ContactPage';
 import { ContactForm } from '@/components/ui/ContactForm';
 import { MdLocationOn, MdPhone, MdBusiness, MdCoffee } from '@/components/icons';
 import { CONTACT_INFO } from '@/lib/constants';
-import Link from 'next/link';
 
-export const metadata = {
-    title: "Contact FlowTIQ - Neem contact met ons op",
-    description: "Vragen over onze AI-assistenten of een kop koffie drinken? Wij horen graag van u.",
-};
+export default function ContactPageSwitcher() {
+    const { version } = useVersion();
 
-export default function ContactPage() {
+    if (version === 3) {
+        return <V3ContactPage />;
+    }
+
+    if (version === 2) {
+        return <V2ContactPage />;
+    }
+
+    if (version === 1) {
+        return <V1ContactPage />;
+    }
+
+    return <V0ContactPage />;
+}
+
+function V0ContactPage() {
     return (
         <main className="flex-grow pt-32 pb-24">
             {/* Hero Header */}

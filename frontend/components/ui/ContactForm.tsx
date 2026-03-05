@@ -30,14 +30,13 @@ export function ContactForm() {
         }
 
         try {
-            const { trpc } = await import('@/lib/trpc');
-            const result = await trpc.sendContact.mutate(data);
-
-            if (result.success) {
-                setStatus('success');
-            } else {
-                throw new Error('Kon bericht niet verzenden.');
-            }
+            // Static site: open mailto link with form data
+            const subject = encodeURIComponent(`Contactformulier: ${data.name}`);
+            const body = encodeURIComponent(
+                `Naam: ${data.name}\nE-mail: ${data.email}\nTelefoon: ${data.phone ?? 'Niet opgegeven'}\n\n${data.message}`
+            );
+            window.location.href = `mailto:martijn@flowtiq.nl?subject=${subject}&body=${body}`;
+            setStatus('success');
         } catch (error: any) {
             console.error('Contact form error:', error);
             setStatus('error');

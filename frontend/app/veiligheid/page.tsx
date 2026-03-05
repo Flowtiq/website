@@ -1,3 +1,10 @@
+'use client';
+
+import React from 'react';
+import { useVersion } from '@/lib/VersionContext';
+import { V1VeiligheidPage } from '@/components/v1/pages/V1VeiligheidPage';
+import { V2VeiligheidPage } from '@/components/v2/pages/V2VeiligheidPage';
+import { V3VeiligheidPage } from '@/components/v3/pages/V3VeiligheidPage';
 import {
     MdLocationOn,
     MdShield,
@@ -9,17 +16,29 @@ import {
     MdLayers,
     MdSpeed,
     MdCheckCircle,
-    MdTrendingUp,
     MdStorage,
     MdLibraryAddCheck
 } from '@/components/icons';
 
-export const metadata = {
-    title: "Veiligheid & Privacy",
-    description: "Innovatie mag nooit ten koste gaan van databeveiliging. Daarom hanteren wij een strikt 'Privacy by Design' beleid.",
-};
+export default function VeiligheidPageSwitcher() {
+    const { version } = useVersion();
 
-export default function VeiligheidPage() {
+    if (version === 3) {
+        return <V3VeiligheidPage />;
+    }
+
+    if (version === 2) {
+        return <V2VeiligheidPage />;
+    }
+
+    if (version === 1) {
+        return <V1VeiligheidPage />;
+    }
+
+    return <V0VeiligheidPage />;
+}
+
+function V0VeiligheidPage() {
     return (
         <main className="flex-grow pt-32 pb-24">
             {/* Header */}
@@ -62,7 +81,7 @@ export default function VeiligheidPage() {
                         },
                         {
                             icon: <MdVerifiedUser size={24} className="text-mint flex-shrink-0" />,
-                            text: <><span className="font-bold">Rechten:</span> Een assistent opereert altijd onder de rechten van de ingelogde medewerker en kan nooit meer zien of doen dan de gebruiker zelf mag.</>
+                            text: <><span className="font-bold">Rechten:</span> Een assistent opereert altijd under de rechten van de ingelogde medewerker en kan nooit meer zien of doen dan de gebruiker zelf mag.</>
                         }
                     ]}
                 />

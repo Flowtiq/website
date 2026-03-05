@@ -1,13 +1,36 @@
 'use client';
 
-import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import { MdMenu, MdClose } from '@/components/icons';
 import { NAV_LINKS } from '@/lib/constants';
+import { useVersion } from '@/lib/VersionContext';
+import { V0Navbar } from '@/components/v0/layout/V0Navbar';
+import { V1Navbar } from '@/components/v1/layout/V1Navbar';
+import { V2Navbar } from '@/components/v2/layout/V2Navbar';
+import { V3Navbar } from '@/components/v3/layout/V3Navbar';
 
 export function Navbar() {
+    const { version } = useVersion();
+
+    if (version === 3) {
+        return <V3Navbar />;
+    }
+
+    if (version === 2) {
+        return <V2Navbar />;
+    }
+
+    if (version === 1) {
+        return <V1Navbar />;
+    }
+
+    return <V0Navbar />;
+}
+
+export function NavbarLegacy() {
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
     const pathname = usePathname();

@@ -8,9 +8,8 @@ export const CONTACT_INFO = {
 
 export const NAV_LINKS = [
     { label: "Producten", href: "/producten" },
-    { label: "Veiligheid & Privacy", href: "/veiligheid" },
+    { label: "Veiligheid", href: "/veiligheid" },
     { label: "Over ons", href: "/over-ons" },
-    { label: "Dashboard", href: "https://app.flowtiq.nl" },
     { label: "Contact", href: "/contact" },
 ];
 

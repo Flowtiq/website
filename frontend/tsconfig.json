@@ -3,7 +3,11 @@
   "compilerOptions": {
     "baseUrl": ".",
     "target": "ESNext",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -21,10 +25,22 @@
       }
     ],
     "paths": {
-      "@/*": ["./*"],
-      "@flowtiq/shared": ["../shared/src/index.ts"]
+      "@/*": [
+        "./*"
+      ],
+      "@flowtiq/shared": [
+        "../shared/src/index.ts"
+      ]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "../shared/src/index.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

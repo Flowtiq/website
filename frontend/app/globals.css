@@ -22,6 +22,42 @@
       transform: translateY(0);
     }
   }
+
+  /* Shared Unified Palette */
+  --color-primary: #0A2E2F;
+  --color-accent: #00C853;
+  --color-secondary-accent: #1565C0;
+  --color-bg-base: #F4F7F9;
+  --color-text-primary: #0B1116;
+  --color-text-secondary: #39424E;
+
+  /* Version 1 Specific Tokens (Mapped to Unified) */
+  --color-v1-primary: var(--color-primary);
+  --color-v1-accent: var(--color-accent);
+  --color-v1-secondary: var(--color-secondary-accent);
+  --color-v1-bg: var(--color-bg-base);
+  --color-v1-text: var(--color-text-primary);
+  --color-v1-text-secondary: var(--color-text-secondary);
+
+  /* Version 2 Specific Tokens (Mapped to Unified) */
+  --color-v2-primary: var(--color-primary);
+  --color-v2-accent: var(--color-accent);
+  --color-v2-accent-alt: var(--color-secondary-accent);
+  --color-v2-bg: var(--color-bg-base);
+  --color-v2-surface: #FFFFFF;
+  --color-v2-text: var(--color-text-primary);
+  --color-v2-text-secondary: var(--color-text-secondary);
+  --color-v2-success: var(--color-accent);
+  --color-v2-border: #D1D5DB;
+
+  /* Version 3 Specific Tokens (Mapped to Unified) */
+  --color-v3-bg: var(--color-bg-base);
+  --color-v3-bg-alt: #FFFFFF;
+  --color-v3-primary: var(--color-primary);
+  --color-v3-accent: var(--color-accent);
+  --color-v3-text: var(--color-text-primary);
+  --color-v3-text-secondary: var(--color-text-secondary);
+  --color-v3-border: #D1D5DB;
 }
 
 :root {

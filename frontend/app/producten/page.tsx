@@ -1,11 +1,32 @@
+'use client';
+
+import React from 'react';
+import { useVersion } from '@/lib/VersionContext';
+import { V1ProductenPage } from '@/components/v1/pages/V1ProductenPage';
+import { V2ProductenPage } from '@/components/v2/pages/V2ProductenPage';
+import { V3ProductenPage } from '@/components/v3/pages/V3ProductenPage';
 import { MdMic, MdAutoFixHigh } from '@/components/icons';
 
-export const metadata = {
-    title: "Producten",
-    description: "Onze assistenten werken samen met elke webapplicatie, van standaardpakket tot maatwerk.",
-};
+export default function ProductenPageSwitcher() {
+    const { version } = useVersion();
 
-export default function ProductenPage() {
+    if (version === 3) {
+        return <V3ProductenPage />;
+    }
+
+    if (version === 2) {
+        return <V2ProductenPage />;
+    }
+
+    if (version === 1) {
+        return <V1ProductenPage />;
+    }
+
+    // Default V0 content
+    return <V0ProductenPage />;
+}
+
+function V0ProductenPage() {
     return (
         <main className="flex-grow pt-32 pb-24">
             {/* Header */}
