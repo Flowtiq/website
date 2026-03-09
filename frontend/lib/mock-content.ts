@@ -40,7 +40,7 @@ export const V2_HOME_MOCK = {
             { id: "voiceiq", title: "VoiceIQ", description: "Van audio naar actie in microseconden." },
             { id: "assistiq", title: "AssistIQ", description: "De enige assistent die écht weet hoe jouw bedrijf werkt." },
             { id: "meetiq", title: "MeetIQ", description: "Optimaliseer elke ontmoeting." },
-            { id: "anlyzeiq", title: "AnalyzeIQ", description: "Toekomstbestendige analyses." }
+            { id: "analyzeiq", title: "AnalyzeIQ", description: "Toekomstbestendige analyses." }
         ]
     }
 };
