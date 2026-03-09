@@ -3,6 +3,7 @@
 import React from 'react';
 import { MdMic, MdAutoFixHigh, MdTerminal, MdFiberManualRecord, MdLayers, MdArrowForward, MdSettingsInputComponent, MdAnalytics } from '@/components/icons';
 import { VersionLink } from '@/components/VersionLink';
+import { Divider } from '@/components/ui/Divider';
 
 export function V2ProductenPage() {
     return (
@@ -18,7 +19,7 @@ export function V2ProductenPage() {
                 <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-12">
                     <div className="max-w-3xl">
                         <div className="flex items-center gap-3 mb-6">
-                            <span className="px-3 py-1 bg-v2-primary/10 border border-v2-border/50 rounded-sm text-[10px] font-mono text-v2-accent font-black uppercase tracking-widest">
+                            <span className="px-3 py-1 bg-v2-primary/10 border border-v2-border/50 rounded-[var(--radius-v2)] text-[10px] font-mono text-v2-accent font-black uppercase tracking-widest">
                                 Ecosystem_V2.0
                             </span>
                             <div className="h-[1px] w-12 bg-v2-accent/30"></div>
@@ -35,7 +36,7 @@ export function V2ProductenPage() {
                         </p>
                     </div>
                     <div className="hidden lg:block">
-                        <div className="p-6 bg-v2-surface border border-v2-border/50 rounded-lg shadow-2xl relative overflow-hidden group">
+                        <div className="p-6 bg-v2-surface border border-v2-border/50 rounded-[var(--radius-v2-lg)] shadow-2xl relative overflow-hidden group">
                             <div className="absolute top-0 right-0 p-2 opacity-20 group-hover:opacity-40 transition-opacity">
                                 <MdSettingsInputComponent size={40} />
                             </div>
@@ -58,10 +59,7 @@ export function V2ProductenPage() {
                 </div>
 
                 {/* Technical Divider */}
-                <div className="h-[1px] w-full bg-v2-border/30 relative">
-                    <div className="absolute top-[-4px] left-0 w-2 h-2 bg-v2-accent rounded-full"></div>
-                    <div className="absolute top-[-4px] right-0 w-2 h-2 bg-v2-accent-alt rounded-full"></div>
-                </div>
+                <Divider variant="dot-both" className="mb-12" />
             </section>
 
             {/* VoiceIQ Section */}
@@ -121,7 +119,7 @@ export function V2ProductenPage() {
 
             {/* CTA Section */}
             <section className="max-w-7xl mx-auto px-6 lg:px-8 mt-24">
-                <div className="bg-v2-primary p-12 lg:p-20 rounded-lg relative overflow-hidden border border-white/10 group">
+                <div className="bg-v2-primary p-12 lg:p-20 rounded-[var(--radius-v2-lg)] relative overflow-hidden border border-white/10 group">
                     {/* Animated Lines */}
                     <div className="absolute inset-0 opacity-10">
                         <div className="absolute top-0 left-[20%] w-[1px] h-full bg-white [mask-image:linear-gradient(to_bottom,transparent,white,transparent)]"></div>
@@ -218,9 +216,9 @@ function ProductSection({ id, label, title, icon, accent, reverse, stats, situat
                 {/* Visual Card (Bento-like) */}
                 <div className="w-full lg:w-[450px] flex-shrink-0">
                     <div className="grid grid-cols-2 gap-4">
-                        <div className="col-span-2 aspect-square bg-v2-surface border border-v2-border/50 rounded-lg flex flex-col items-center justify-center relative overflow-hidden group">
+                        <div className="col-span-2 aspect-square bg-v2-surface border border-v2-border/50 rounded-[var(--radius-v2-lg)] flex flex-col items-center justify-center relative overflow-hidden group">
                             <div className="absolute inset-0 bg-gradient-to-br from-v2-primary/5 to-transparent"></div>
-                            <div className={`p-8 rounded-sm ${bgAccentClass} text-v2-bg mb-6 shadow-2xl relative z-10 group-hover:scale-110 transition-transform duration-500`}>
+                            <div className={`p-8 rounded-[var(--radius-v2)] ${bgAccentClass} text-v2-bg mb-6 shadow-2xl relative z-10 group-hover:scale-110 transition-transform duration-500`}>
                                 {icon}
                             </div>
                             <div className="text-center relative z-10">
@@ -238,16 +236,16 @@ function ProductSection({ id, label, title, icon, accent, reverse, stats, situat
                             </div>
                         </div>
 
-                        <div className="aspect-video bg-v2-surface border border-v2-border/50 rounded-lg p-6 flex flex-col justify-end group">
+                        <div className="aspect-video bg-v2-surface border border-v2-border/50 rounded-[var(--radius-v2)] p-6 flex flex-col justify-end group">
                             <MdLayers size={24} className={`${accentClass} mb-4 group-hover:translate-y-[-4px] transition-transform`} />
                             <span className="block text-[10px] font-mono font-black text-v2-text-secondary uppercase">Layer_Protocol</span>
                         </div>
-                        <div className="aspect-video bg-v2-primary text-white border border-white/10 rounded-lg p-6 flex flex-col justify-end group">
+                        <div className="aspect-video bg-v2-primary text-white border border-white/10 rounded-[var(--radius-v2)] p-6 flex flex-col justify-end group">
                             <MdTerminal size={24} className="text-v2-accent mb-4 group-hover:translate-y-[-4px] transition-transform" />
                             <span className="block text-[10px] font-mono font-black opacity-60 uppercase">Runtime_State</span>
                         </div>
 
-                        <div className="col-span-2 bg-v2-bg p-8 border border-v2-accent/30 rounded-lg relative group">
+                        <div className="col-span-2 bg-v2-bg p-8 border border-v2-accent/30 rounded-[var(--radius-v2)] relative group">
                             <div className="absolute top-0 right-0 p-3 opacity-10 group-hover:opacity-30 transition-opacity">
                                 <MdAnalytics size={32} className={accentClass} />
                             </div>

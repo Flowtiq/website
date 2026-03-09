@@ -48,9 +48,9 @@ export function V2Footer() {
                             De operating layer voor de AI-driven organisatie. Wij engineeren autonome pipelines die administratie en communicatie verwerken met absolute precisie.
                         </p>
                         <div className="flex gap-4 items-center pt-4 opacity-50">
-                            <div className="w-8 h-8 rounded-sm bg-v2-primary/10 border border-v2-border/50 flex items-center justify-center grayscale hover:grayscale-0 transition-all cursor-crosshair">A</div>
-                            <div className="w-8 h-8 rounded-sm bg-v2-primary/10 border border-v2-border/50 flex items-center justify-center grayscale hover:grayscale-0 transition-all cursor-crosshair">B</div>
-                            <div className="w-8 h-8 rounded-sm bg-v2-primary/10 border border-v2-border/50 flex items-center justify-center grayscale hover:grayscale-0 transition-all cursor-crosshair">C</div>
+                            <div className="w-8 h-8 rounded-sm bg-v2-primary/10 border border-v2-border/50 flex items-center justify-center grayscale hover:grayscale-0 transition-all cursor-crosshair">ISO</div>
+                            <div className="w-8 h-8 rounded-sm bg-v2-primary/10 border border-v2-border/50 flex items-center justify-center grayscale hover:grayscale-0 transition-all cursor-crosshair">GDPR</div>
+                            <div className="w-8 h-8 rounded-sm bg-v2-primary/10 border border-v2-border/50 flex items-center justify-center grayscale hover:grayscale-0 transition-all cursor-crosshair">EU</div>
                         </div>
                     </div>
 
@@ -61,6 +61,17 @@ export function V2Footer() {
                             <li><VersionLink href="/producten" className="hover:text-v2-primary transition-colors flex items-center gap-2 group"><span className="w-1 h-1 bg-v2-accent transition-all group-hover:w-3"></span> VoiceIQ</VersionLink></li>
                             <li><VersionLink href="/producten" className="hover:text-v2-primary transition-colors flex items-center gap-2 group"><span className="w-1 h-1 bg-v2-accent transition-all group-hover:w-3"></span> AssistIQ</VersionLink></li>
                             <li><VersionLink href="/producten" className="hover:text-v2-primary transition-colors flex items-center gap-2 group"><span className="w-1 h-1 bg-v2-accent transition-all group-hover:w-3"></span> Architecture</VersionLink></li>
+                        </ul>
+                    </div>
+
+                    {/* Sectoren */}
+                    <div>
+                        <h4 className="text-[10px] font-mono text-v2-accent font-black uppercase tracking-[.3em] mb-6">Sectoren</h4>
+                        <ul className="space-y-4 text-sm font-bold text-v2-text-secondary">
+                            <li><VersionLink href="/producten" className="hover:text-v2-primary transition-colors">Care & Cure</VersionLink></li>
+                            <li><VersionLink href="/producten" className="hover:text-v2-primary transition-colors">Financieel</VersionLink></li>
+                            <li><VersionLink href="/producten" className="hover:text-v2-primary transition-colors">Juridisch</VersionLink></li>
+                            <li><VersionLink href="/producten" className="hover:text-v2-primary transition-colors">Logistiek</VersionLink></li>
                         </ul>
                     </div>
 

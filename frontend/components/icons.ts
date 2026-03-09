@@ -46,7 +46,10 @@ import {
     MdOutlineMail,
     MdOutlinePhone,
     MdAnalytics,
-    MdSettingsInputComponent
+    MdSettingsInputComponent,
+    MdFormatQuote,
+    MdArrowDownward,
+    MdAdd
 } from 'react-icons/md';
 
 export {
@@ -101,5 +104,8 @@ export {
     MdAnalytics,
     MdSettingsInputComponent,
     MdArrowForward as MdArrowForwardV3,
-    MdAutoFixHigh as MdAutoFixHighV3
+    MdAutoFixHigh as MdAutoFixHighV3,
+    MdFormatQuote,
+    MdArrowDownward,
+    MdAdd
 };

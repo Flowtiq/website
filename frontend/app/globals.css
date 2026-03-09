@@ -58,6 +58,9 @@
   --color-v3-text: var(--color-text-primary);
   --color-v3-text-secondary: var(--color-text-secondary);
   --color-v3-border: #D1D5DB;
+
+  --radius-v2: 2.5rem;
+  --radius-v2-lg: 4rem;
 }
 
 :root {

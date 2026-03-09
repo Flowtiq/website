@@ -24,7 +24,7 @@ export function V2ContactPage() {
                 <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
                     <div className="max-w-3xl">
                         <div className="flex items-center gap-3 mb-6">
-                            <span className="text-[10px] font-mono text-v2-accent font-black uppercase tracking-widest bg-v2-accent/10 px-2 py-0.5 border border-v2-accent/30 rounded-sm">
+                            <span className="text-[10px] font-mono text-v2-accent font-black uppercase tracking-widest bg-v2-accent/10 px-2 py-0.5 border border-v2-accent/30 rounded-[var(--radius-v2)]">
                                 Communication_Module
                             </span>
                             <div className="h-[1px] w-12 bg-v2-border/30"></div>
@@ -71,7 +71,7 @@ export function V2ContactPage() {
                         </div>
 
                         {/* Business Registry */}
-                        <div className="bg-v2-surface p-8 border border-v2-border/50 rounded-lg">
+                        <div className="bg-v2-surface p-8 border border-v2-border/50 rounded-[var(--radius-v2-lg)]">
                             <div className="flex items-center gap-3 mb-6">
                                 <MdBusiness size={20} className="text-v2-text-secondary" />
                                 <span className="text-[10px] font-mono font-black text-v2-text-secondary uppercase tracking-widest">Registry_Data</span>
@@ -94,7 +94,7 @@ export function V2ContactPage() {
                     </div>
 
                     {/* Contact Form Terminal */}
-                    <div className="bg-v2-primary rounded-lg shadow-2xl overflow-hidden border border-white/10 flex flex-col group">
+                    <div className="bg-v2-primary rounded-[var(--radius-v2-lg)] shadow-2xl overflow-hidden border border-white/10 flex flex-col group">
                         {/* Terminal Header */}
                         <div className="bg-white/10 px-6 py-3 flex items-center justify-between border-b border-white/5">
                             <div className="flex items-center gap-2">
@@ -147,7 +147,7 @@ export function V2ContactPage() {
                     background: rgba(255, 255, 255, 0.05) !important;
                     border: 1px solid rgba(255, 255, 255, 0.1) !important;
                     color: white !important;
-                    border-radius: 4px !important;
+                    border-radius: var(--radius-v2) !important;
                     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
                     font-size: 0.875rem !important;
                 }
@@ -164,7 +164,7 @@ export function V2ContactPage() {
                     text-transform: uppercase !important;
                     letter-spacing: 0.2em !important;
                     font-size: 12px !important;
-                    border-radius: 2px !important;
+                    border-radius: var(--radius-v2) !important;
                     padding-top: 1rem !important;
                     padding-bottom: 1rem !important;
                     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
@@ -185,9 +185,9 @@ export function V2ContactPage() {
 
 function ContactDetailCard({ icon, label, title, value, href, meta, fullWidth }: any) {
     const Content = (
-        <div className={`bg-v2-surface p-8 border border-v2-border/50 rounded-lg group transition-all hover:border-v2-accent hover:shadow-xl ${fullWidth ? 'md:col-span-2' : ''}`}>
+        <div className={`bg-v2-surface p-8 border border-v2-border/50 rounded-[var(--radius-v2-lg)] group transition-all hover:border-v2-accent hover:shadow-xl ${fullWidth ? 'md:col-span-2' : ''}`}>
             <div className="flex items-center gap-3 mb-6">
-                <div className="p-2 bg-v2-primary/5 rounded-sm text-v2-accent group-hover:bg-v2-accent group-hover:text-v2-bg transition-all">
+                <div className="p-2 bg-v2-primary/5 rounded-[var(--radius-v2)] text-v2-accent group-hover:bg-v2-accent group-hover:text-v2-bg transition-all">
                     {icon}
                 </div>
                 <span className="text-[10px] font-mono font-black text-v2-text-secondary uppercase tracking-widest">{label}</span>

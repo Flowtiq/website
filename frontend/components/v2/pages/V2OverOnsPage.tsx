@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { MdGroups, MdHandshake, MdTrendingUp, MdRadar, MdWorkspaces, MdFiberManualRecord, MdTerminal } from '@/components/icons';
+import { Divider } from '@/components/ui/Divider';
 
 export function V2OverOnsPage() {
     return (
@@ -16,7 +17,7 @@ export function V2OverOnsPage() {
                 <div className="grid lg:grid-cols-2 gap-16 items-center">
                     <div>
                         <div className="flex items-center gap-3 mb-6">
-                            <span className="text-[10px] font-mono text-v2-accent font-black uppercase tracking-widest bg-v2-accent/10 px-2 py-0.5 border border-v2-accent/30 rounded-sm">
+                            <span className="text-[10px] font-mono text-v2-accent font-black uppercase tracking-widest bg-v2-accent/10 px-2 py-0.5 border border-v2-accent/30 rounded-[var(--radius-v2)]">
                                 Core_Philosophy
                             </span>
                             <div className="h-[1px] w-12 bg-v2-border/30"></div>
@@ -30,7 +31,7 @@ export function V2OverOnsPage() {
                         </p>
                     </div>
                     <div className="relative">
-                        <div className="aspect-square bg-v2-surface border border-v2-border/50 rounded-lg p-12 relative group shadow-2xl">
+                        <div className="aspect-square bg-v2-surface border border-v2-border/50 rounded-[var(--radius-v2-lg)] p-12 relative group shadow-2xl">
                             <div className="absolute top-0 right-0 p-4 font-mono text-[8px] opacity-20 group-hover:opacity-40 transition-opacity">
                                 REF: 41.9022° N, 12.4539° E
                             </div>
@@ -43,7 +44,7 @@ export function V2OverOnsPage() {
                             </div>
 
                             {/* Floating Tech Annotations */}
-                            <div className="absolute -bottom-8 -left-8 bg-v2-primary text-white p-6 rounded-lg shadow-xl hidden md:block border border-white/10">
+                            <div className="absolute -bottom-8 -left-8 bg-v2-primary text-white p-6 rounded-[var(--radius-v2)] shadow-xl hidden md:block border border-white/10">
                                 <div className="flex items-center gap-4 mb-3">
                                     <MdGroups size={24} className="text-v2-accent" />
                                     <span className="text-xs font-mono font-black uppercase tracking-widest">Expert_Nodes</span>
@@ -63,7 +64,7 @@ export function V2OverOnsPage() {
             <section className="max-w-7xl mx-auto px-6 lg:px-8 mb-32">
                 <div className="flex items-center gap-4 mb-16">
                     <h2 className="text-[10px] font-mono text-v2-text-secondary font-black uppercase tracking-[0.4em]">System_Specs</h2>
-                    <div className="h-[1px] flex-grow bg-v2-border/30"></div>
+                    <Divider variant="simple" className="flex-grow !py-0" />
                 </div>
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-1">
@@ -113,10 +114,10 @@ export function V2OverOnsPage() {
             </section>
 
             {/* Final Philosophy: Protocol Definition */}
-            <section className="max-w-4xl mx-auto px-6 lg:px-8 py-32 border-t border-v2-border/20 relative">
-                <div className="absolute top-[-2px] left-1/2 -translate-x-1/2 w-12 h-1 bg-v2-accent rounded-full"></div>
+            <section className="max-w-4xl mx-auto px-6 lg:px-8 py-32 relative">
+                <Divider variant="dot-both" className="mb-16" />
 
-                <div className="bg-v2-surface p-12 lg:p-16 rounded-lg border border-v2-border/50 text-center relative overflow-hidden">
+                <div className="bg-v2-surface p-12 lg:p-16 rounded-[var(--radius-v2-lg)] border border-v2-border/50 text-center relative overflow-hidden">
                     <div className="absolute top-0 right-0 p-6 opacity-[0.03] scale-150 rotate-12">
                         <MdHandshake size={200} />
                     </div>
@@ -152,7 +153,7 @@ function ValueCard({ code, title, subtitle, description, icon }: any) {
             </div>
 
             <div className="flex items-center gap-4 mb-8">
-                <div className="p-3 bg-v2-accent/10 rounded-sm text-v2-accent group-hover:bg-white group-hover:text-v2-primary transition-colors">
+                <div className="p-3 bg-v2-accent/10 rounded-[var(--radius-v2)] text-v2-accent group-hover:bg-white group-hover:text-v2-primary transition-colors">
                     {icon}
                 </div>
                 <h3 className="text-2xl font-black font-mono tracking-tighter uppercase">{title}</h3>
