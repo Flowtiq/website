@@ -3,6 +3,7 @@ import { Inter, Montserrat } from "next/font/google";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { VersionProvider } from "@/lib/VersionContext";
+import { QueryProvider } from "@/components/providers/QueryProvider";
 import { ClientOnly } from "@/components/ui/ClientOnly";
 import "./globals.css";
 
@@ -38,19 +39,21 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${montserrat.variable} antialiased`}
       >
-        <VersionProvider>
-          <ClientOnly fallback={<div className="h-20" />}>
-            <Navbar />
-          </ClientOnly>
-          <main className="flex-grow pt-20">
-            <ClientOnly>
-              {children}
+        <QueryProvider>
+          <VersionProvider>
+            <ClientOnly fallback={<div className="h-20" />}>
+              <Navbar />
             </ClientOnly>
-          </main>
-          <ClientOnly>
-            <Footer />
-          </ClientOnly>
-        </VersionProvider>
+            <main className="flex-grow pt-20">
+              <ClientOnly>
+                {children}
+              </ClientOnly>
+            </main>
+            <ClientOnly>
+              <Footer />
+            </ClientOnly>
+          </VersionProvider>
+        </QueryProvider>
       </body>
     </html>
   );
