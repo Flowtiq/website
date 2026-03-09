@@ -58,9 +58,10 @@ export function V2Footer() {
                     <div>
                         <h4 className="text-[10px] font-mono text-v2-accent font-black uppercase tracking-[.3em] mb-6">Nodes</h4>
                         <ul className="space-y-4 text-sm font-bold text-v2-text-secondary">
-                            <li><VersionLink href="/producten" className="hover:text-v2-primary transition-colors flex items-center gap-2 group"><span className="w-1 h-1 bg-v2-accent transition-all group-hover:w-3"></span> VoiceIQ</VersionLink></li>
-                            <li><VersionLink href="/producten" className="hover:text-v2-primary transition-colors flex items-center gap-2 group"><span className="w-1 h-1 bg-v2-accent transition-all group-hover:w-3"></span> AssistIQ</VersionLink></li>
-                            <li><VersionLink href="/producten" className="hover:text-v2-primary transition-colors flex items-center gap-2 group"><span className="w-1 h-1 bg-v2-accent transition-all group-hover:w-3"></span> Architecture</VersionLink></li>
+                            <li><VersionLink href="/producten#voiceiq" className="hover:text-v2-primary transition-colors flex items-center gap-2 group"><span className="w-1 h-1 bg-v2-accent transition-all group-hover:w-3"></span> VoiceIQ</VersionLink></li>
+                            <li><VersionLink href="/producten#assistiq" className="hover:text-v2-primary transition-colors flex items-center gap-2 group"><span className="w-1 h-1 bg-v2-accent transition-all group-hover:w-3"></span> AssistIQ</VersionLink></li>
+                            <li><VersionLink href="/producten" className="hover:text-v2-primary transition-colors flex items-center gap-2 group"><span className="w-1 h-1 bg-v2-accent transition-all group-hover:w-3"></span> MeetIQ</VersionLink></li>
+                            <li><VersionLink href="/producten" className="hover:text-v2-primary transition-colors flex items-center gap-2 group"><span className="w-1 h-1 bg-v2-accent transition-all group-hover:w-3"></span> AnalyzeIQ</VersionLink></li>
                         </ul>
                     </div>
 
@@ -68,10 +69,12 @@ export function V2Footer() {
                     <div>
                         <h4 className="text-[10px] font-mono text-v2-accent font-black uppercase tracking-[.3em] mb-6">Sectoren</h4>
                         <ul className="space-y-4 text-sm font-bold text-v2-text-secondary">
-                            <li><VersionLink href="/producten" className="hover:text-v2-primary transition-colors">Care & Cure</VersionLink></li>
-                            <li><VersionLink href="/producten" className="hover:text-v2-primary transition-colors">Financieel</VersionLink></li>
-                            <li><VersionLink href="/producten" className="hover:text-v2-primary transition-colors">Juridisch</VersionLink></li>
-                            <li><VersionLink href="/producten" className="hover:text-v2-primary transition-colors">Logistiek</VersionLink></li>
+                            <li><VersionLink href="/contact" className="hover:text-v2-primary transition-colors">Care & Cure</VersionLink></li>
+                            <li><VersionLink href="/contact" className="hover:text-v2-primary transition-colors">Financieel</VersionLink></li>
+                            <li><VersionLink href="/contact" className="hover:text-v2-primary transition-colors">Juridisch</VersionLink></li>
+                            <li><VersionLink href="/contact" className="hover:text-v2-primary transition-colors">Operations</VersionLink></li>
+                            <li><VersionLink href="/contact" className="hover:text-v2-primary transition-colors">HR</VersionLink></li>
+                            <li><VersionLink href="/contact" className="hover:text-v2-primary transition-colors">IT</VersionLink></li>
                         </ul>
                     </div>
 

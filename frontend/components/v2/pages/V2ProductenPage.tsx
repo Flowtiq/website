@@ -36,22 +36,26 @@ export function V2ProductenPage() {
                         </p>
                     </div>
                     <div className="hidden lg:block">
-                        <div className="p-6 bg-v2-surface border border-v2-border/50 rounded-[var(--radius-v2-lg)] shadow-2xl relative overflow-hidden group">
-                            <div className="absolute top-0 right-0 p-2 opacity-20 group-hover:opacity-40 transition-opacity">
-                                <MdSettingsInputComponent size={40} />
+                        <div className="p-10 bg-v2-surface border border-v2-border/50 rounded-[var(--radius-v2-lg)] shadow-2xl relative overflow-hidden group min-w-[300px]">
+                            <div className="absolute top-0 right-0 p-4 opacity-20 group-hover:opacity-40 transition-opacity">
+                                <MdSettingsInputComponent size={64} />
                             </div>
-                            <div className="flex items-center gap-4 mb-4">
-                                <div className="p-2 bg-v2-accent rounded-sm text-v2-bg">
-                                    <MdAnalytics size={20} />
+                            <div className="flex items-center gap-6 mb-8">
+                                <div className="p-3 bg-v2-accent rounded-sm text-v2-bg">
+                                    <MdAnalytics size={28} />
                                 </div>
-                                <span className="text-xs font-mono font-black uppercase tracking-widest">System_Metrics</span>
+                                <span className="text-sm font-mono font-black uppercase tracking-[0.2em]">System_Metrics</span>
                             </div>
-                            <div className="space-y-2">
-                                <div className="h-1.5 w-32 bg-v2-primary/10 rounded-full overflow-hidden">
+                            <div className="space-y-4">
+                                <div className="h-2 w-48 bg-v2-primary/10 rounded-full overflow-hidden">
                                     <div className="h-full w-[85%] bg-v2-accent animate-pulse"></div>
                                 </div>
-                                <div className="h-1.5 w-40 bg-v2-primary/10 rounded-full overflow-hidden">
+                                <div className="h-2 w-56 bg-v2-primary/10 rounded-full overflow-hidden">
                                     <div className="h-full w-[60%] bg-v2-accent-alt"></div>
+                                </div>
+                                <div className="pt-4 flex justify-between items-center text-[10px] font-mono text-v2-text-secondary uppercase tracking-widest">
+                                    <span>Sync_Status</span>
+                                    <span className="text-v2-accent">Active</span>
                                 </div>
                             </div>
                         </div>
