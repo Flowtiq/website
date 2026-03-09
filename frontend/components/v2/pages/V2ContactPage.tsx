@@ -94,7 +94,7 @@ export function V2ContactPage() {
                     </div>
 
                     {/* Contact Form Terminal */}
-                    <div className="bg-v2-primary rounded-[var(--radius-v2-lg)] shadow-2xl overflow-hidden border border-white/10 flex flex-col group">
+                    <div className="bg-v2-primary shadow-2xl overflow-hidden border border-white/10 flex flex-col group">
                         {/* Terminal Header */}
                         <div className="bg-white/10 px-6 py-3 flex items-center justify-between border-b border-white/5">
                             <div className="flex items-center gap-2">
@@ -147,7 +147,7 @@ export function V2ContactPage() {
                     background: rgba(255, 255, 255, 0.05) !important;
                     border: 1px solid rgba(255, 255, 255, 0.1) !important;
                     color: white !important;
-                    border-radius: var(--radius-v2) !important;
+                    border-radius: 0 !important;
                     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
                     font-size: 0.875rem !important;
                 }
@@ -164,7 +164,7 @@ export function V2ContactPage() {
                     text-transform: uppercase !important;
                     letter-spacing: 0.2em !important;
                     font-size: 12px !important;
-                    border-radius: var(--radius-v2) !important;
+                    border-radius: 0 !important;
                     padding-top: 1rem !important;
                     padding-bottom: 1rem !important;
                     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
