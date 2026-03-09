@@ -15,7 +15,7 @@ export const V2_HOME_MOCK = {
     impact_block: {
         title: "Simpel en snel te implementeren.",
         subtitle: "Geen vervanging van applicaties. Het huidige softwarelandschap blijft intact.",
-        quote: "Maximale impact op uw processen, minimale impact op uw IT" // This is the one to be centered/enlarged
+        quote: "Laat medewerkers weer het verschil maken, simpelweg door ze slim te ondersteunen"
     },
     timeline: {
         title: "In 30 dagen van kennismaking naar minder administratieve lasten",
